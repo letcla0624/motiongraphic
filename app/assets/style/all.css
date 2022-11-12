@@ -244,6 +244,18 @@
     transform: scale(1);
   }
 }
+.award_light.turn {
+  animation: turn 1s both;
+  animation-delay: 0.2s;
+}
+@keyframes turn {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-270deg);
+  }
+}
 .awardBlock {
   transform: translateX(-200px);
   opacity: 0;
@@ -409,7 +421,6 @@
     bottom: -10px !important;
   }
 }
-
 .section10Block {
   transform: translateY(300px);
   opacity: 0;
