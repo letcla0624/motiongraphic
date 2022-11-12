@@ -1,0 +1,130 @@
+---
+title: The F2E - 互動式網頁設計
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<section class="bg-secondary h-screen relative" style="height: 33000px;">
+
+  <header class="fixed w-full px-5 top-0 z-30">
+    <div class="flex justify-between items-start">
+      <img src="./assets/images/logo/logo.png" alt="logo" class="w-[165px] m-5 mb-0 logo invisible">
+      <img src="./assets/images/btn/btn_user.png" alt="user" class="w-[80px] m-5 mb-0 cursor-pointer user">
+    </div>
+  </header>
+
+  <!-- side menu -->
+  <ul class="sideMenu h-screen bg-primary p-10 pr-8 fixed  z-50 -translate-x-36 transition-all">
+    <li class="py-5">
+      <a href="#" class="flex flex-col justify-center items-center">
+        <img src="./assets/images/ic/ic_menu_info.png" alt="" class="w-16">
+        <p class="text-lg tracking-widest font-normal text-secondary mt-2">關卡資訊</p>
+      </a>
+    </li>
+    <li class="py-5">
+      <a href="#" class="flex flex-col justify-center items-center">
+        <img src="./assets/images/ic/ic_menu_list.png" alt="" class="w-16">
+        <p class="text-lg tracking-widest font-normal text-secondary mt-2">作品列表</p>
+      </a>
+    </li>
+    <li class="py-5">
+      <a href="#" class="flex flex-col justify-center items-center">
+        <img src="./assets/images/ic/ic_menu_strategy.png" alt="" class="w-16">
+        <p class="text-lg tracking-widest font-normal text-secondary mt-2">資源攻略</p>
+      </a>
+    </li>
+    <li class="py-5">
+      <a href="#" class="flex flex-col justify-center items-center">
+        <img src="./assets/images/ic/ic_menu_job.png" alt="" class="w-16">
+        <p class="text-lg tracking-widest font-normal text-secondary mt-2">求職專區</p>
+      </a>
+    </li>
+  </ul>
+
+  <!-- cloud -->
+  <div class="flex justify-around absolute top-[337px] cloud">
+    <img src="./assets/images/bg/bg_decorate_01.png" alt="" class="w-1/3 leftCloud">
+    <img src="./assets/images/bg/bg_decorate_05.png" alt="" class="w-1/3 rightCloud">
+  </div>
+
+  <div class="container mx-auto">
+    <div class=" flex justify-center pt-[3%] z-10  fixed left-1/2 -translate-x-1/2 logoText">
+      <img src="./assets/images/logo/logo_text.png" alt="logo-text" class="max-w-[680px] w-full">
+    </div>
+    <div class=" z-10 flex flex-col justify-center fixed top-[26%] left-1/2 -translate-x-1/2">
+      <h1 class="text-[32px] font-bold text-white bg-highlight rounded-full w-fit px-8 py-2 mx-auto h1Text">互動式網頁設計</h1>
+      <ul class="grid lg:grid-cols-3 gap-10 relative groupAll">
+        <li class="flex justify-center lg:justify-end py-10">
+          <div class="flex flex-col items-center">
+            <h2 class="text-2xl text-primary mb-2">前端工程師</h2>
+            <div class="bg-primary text-white flex w-fit rounded-full px-5 py-1">
+              <img src="./assets/images/ic/ic_users.svg" alt="" class="w-5">
+              <p class="text-2xl ml-3">920</p>
+            </div>
+          </div>
+        </li>
+        <li class="flex justify-center py-10">
+          <div class="flex flex-col items-center">
+            <h2 class="text-2xl text-primary mb-2">UI 設計師</h2>
+            <div class="bg-primary text-white flex w-fit rounded-full px-5 py-1">
+              <img src="./assets/images/ic/ic_users.svg" alt="" class="w-5">
+              <p class="text-2xl ml-3">110</p>
+            </div>
+          </div>
+        </li>
+        <li class="flex justify-center lg:justify-start py-10">
+          <div class="flex flex-col items-center">
+            <h2 class="text-2xl text-primary mb-2">團體組</h2>
+            <div class="bg-primary text-white flex w-fit rounded-full px-5 py-1">
+              <img src="./assets/images/ic/ic_users.svg" alt="" class="w-5">
+              <p class="text-2xl ml-3">41</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="fixed bottom-0 left-1/2 -translate-x-1/2">
+      <div class="grid grid-cols-3 absolute bottom-0">
+        <div class="relative">
+          <img src="./assets/images/character/character_f2e.gif" alt="dog" class="">
+        </div>
+        <div class="relative">
+          <img src="./assets/images/character/character_ui.gif" alt="cat" class="lg:ml-4 absolute bottom-0">
+        </div>
+        <div class="relative">
+          <img src="./assets/images/character/character_team.gif" alt="pig" class="absolute bottom-0">
+        </div>
+      </div>
+      <img src="./assets/images/main/road.png" alt="road" class="w-full 3xl:w-auto max-w-[1175px]">
+    </div>
+  </div>
+  <div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-4/5 flex flex-col justify-center -z-0">
+    <img src="./assets/images/main/start.png" alt="start" class="w-full h-screen startPole">
+  </div>
+
+  <!-- traffic light -->
+  <div class="fixed right-0 top-[43%] flex flex-col items-center trafficAll">
+    <p class="text-highlight uppercase text-[32px] tracking-widest trafficText">READY?</p>
+    <div class="relative trafficLight">
+      <img src="./assets/images/main/ready_frame.png" alt="traffic-light" class="relative w-[300px] z-10">
+      <img src="./assets/images/main/ready_3.png" alt="red-light" class="w-1/5 absolute top-[30px] left-8 redLight">
+      <img src="./assets/images/main/ready_2.png" alt="red-light" class="w-1/5 absolute top-[30px] left-28 yellowLight">
+      <img src="./assets/images/main/ready_1.png" alt="red-light" class="w-1/5 absolute top-[30px] left-44 greenLight">
+    </div>
+  </div>
+
+  <footer class="fixed bottom-0 w-full">
+    <div class="flex justify-between px-5">
+      <div class="ml-5">
+        <img src="./assets/images/main/map.svg" alt="map" class="relative">
+        <img src="./assets/images/main/map_now.gif" alt="" class="absolute top-[52px] left-[42px]">
+      </div>
+      <div class="flex flex-col items-center">
+        <p class="text-primary text-2xl tracking-widest uppercase">join</p>
+        <img src="./assets/images/btn/btn_joinHand.png" alt="joinHand" class="w-[60px] mt-3 -mb-4 animate-down">
+        <img src="./assets/images/btn/btn_join.png" alt="join" class="w-[80px] m-5 cursor-pointer joinBtn">
+      </div>
+    </div>
+  </footer>
+</section>

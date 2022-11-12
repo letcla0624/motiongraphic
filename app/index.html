@@ -1,0 +1,422 @@
+---
+title: The F2E - 互動式網頁設計
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<div class="allSection relative bg-secondary">
+  <section class="section section1 flex justify-center items-center lg:block bg-secondary w-screen lg:h-screen z-[10]">
+    <div class="container mx-auto">
+      <div class="hidden lg:flex justify-center pt-[3%] fixed left-1/2 -translate-x-1/2 logoText z-[1]">
+        <img src="./assets/images/logo/logo_text.png" alt="logo-text" class="max-w-[680px] w-full">
+      </div>
+      <div
+        class="flex flex-col justify-center items-center -mt-[180px] lg:mt-10 lg:fixed lg:left-1/2 lg:-translate-x-1/2 lg:top-1/3 lg:-translate-y-1/3 z-[1]">
+        <img src="./assets/images/logo/logo.png" alt="logo" class="max-w-[260px] lg:hidden mb-5">
+        <h1
+          class="text-lg lg:text-[32px] font-bold text-white bg-highlight rounded-full w-fit px-8 py-1 lg:py-2 mx-auto h1Text">
+          互動式網頁設計
+        </h1>
+        <ul class="grid lg:grid-cols-3 gap-3 lg:gap-10 relative w-screen mt-3 lg:mt-0 groupAll z-[1]">
+          <li class="flex justify-center lg:justify-end lg:py-10">
+            <div class="flex flex-col items-center">
+              <h2 class="text-lg lg:text-2xl text-primary mb-2">前端工程師</h2>
+              <div class="bg-primary text-white flex w-fit rounded-full px-5 py-1">
+                <img src="./assets/images/ic/ic_users.svg" alt="" class="w-5">
+                <p class="text-lg lg:text-2xl ml-3">920</p>
+              </div>
+            </div>
+          </li>
+          <li class="flex justify-center lg:py-10">
+            <div class="flex flex-col items-center">
+              <h2 class="text-lg lg:text-2xl text-primary mb-2">UI 設計師</h2>
+              <div class="bg-primary text-white flex w-fit rounded-full px-5 py-1">
+                <img src="./assets/images/ic/ic_users.svg" alt="" class="w-5">
+                <p class="text-lg lg:text-2xl ml-3">110</p>
+              </div>
+            </div>
+          </li>
+          <li class="flex justify-center lg:justify-start lg:py-10">
+            <div class="flex flex-col items-center">
+              <h2 class="text-lg lg:text-2xl text-primary mb-2">團體組</h2>
+              <div class="bg-primary text-white flex w-fit rounded-full px-5 py-1">
+                <img src="./assets/images/ic/ic_users.svg" alt="" class="w-5">
+                <p class="text-lg lg:text-2xl ml-3">41</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- cloud -->
+    <div class="flex justify-between lg:justify-around absolute w-full top-[337px] cloud z-0">
+      <img src="./assets/images/bg/bg_decorate_01.png" alt="" class="w-1/3 leftCloud">
+      <img src="./assets/images/bg/bg_decorate_05.png" alt="" class="w-1/3 rightCloud">
+    </div>
+    <!-- pole -->
+    <div class="fixed left-1/2 -translate-x-1/2 w-4/5 hidden lg:flex flex-col justify-center transition-all z-0">
+      <img src="./assets/images/main/start.png" alt="start" class="w-full h-screen object-fill startPole">
+    </div>
+    <!-- traffic light -->
+    <div
+      class="absolute lg:fixed max-w-[125px] lg:max-w-[300px] right-0 top-[57%] lg:top-[43%] flex flex-col items-center trafficAll transition-all">
+      <p class="text-highlight uppercase lg:text-[32px] tracking-widest trafficText">READY?</p>
+      <div class="relative trafficLight w-full">
+        <img src="./assets/images/main/ready_frame.png" alt="traffic-light" class="relative lg:max-w-[300px] z-[1]">
+        <img src="./assets/images/main/ready_3.png" alt="red-light"
+          class="w-[20%] lg:w-1/5 absolute top-[12px] lg:top-[30px] left-3 lg:left-8 redLight">
+        <img src="./assets/images/main/ready_2.png" alt="red-light"
+          class="w-[20%] lg:w-1/5 absolute top-[12px] lg:top-[30px] left-11 lg:left-28 yellowLight">
+        <img src="./assets/images/main/ready_1.png" alt="red-light"
+          class="w-[20%] lg:w-1/5 absolute top-[12px] lg:top-[30px] left-[72px] lg:left-44 greenLight">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section2 bg-secondary w-screen lg:h-screen z-[9]">
+    <div class="py-8 lg:fixed w-full flex justify-center items-center text-center">
+      <h2 class="title section2Title text-2xl lg:text-6xl text-primary w-full py-[60px] lg:invisible">
+        你是否也有以下困擾？
+      </h2>
+    </div>
+    <div class="container mx-auto">
+      <div class="lg:fixed top-[19%] lg:left-1/2 lg:-translate-x-1/2 container 2xl:px-20">
+        <ul class="grid lg:grid-cols-3 gap-4 relative w-full ">
+          <li class="flex justify-center lg:justify-end py-3 lg:py-10 section2Block1 lg:opacity-0 transition-all">
+            <div class="flex flex-col items-center">
+              <h2 class="text-3xl text-highlight mb-2">羨慕別人的酷酷動畫網頁？</h2>
+              <img src="./assets/images/main/question_1.png" alt="羨慕別人的酷酷動畫網頁？" class="hidden lg:block">
+              <img src="./assets/images/main/question_1_m.png" alt="羨慕別人的酷酷動畫網頁？" class="lg:hidden">
+            </div>
+          </li>
+          <li class="flex justify-center py-3 lg:py-10 section2Block2 lg:opacity-0 transition-all">
+            <div class="flex flex-col items-center">
+              <h2 class="text-3xl text-highlight mb-2">滿足不了同事的許願？</h2>
+              <img src="./assets/images/main/question_2.png" alt="滿足不了同事的許願？">
+            </div>
+          </li>
+          <li class="flex justify-center lg:justify-start py-3 lg:py-10 section2Block3 lg:opacity-0 transition-all">
+            <div class="flex flex-col items-center">
+              <h2 class="text-3xl text-highlight mb-2">動畫技能樹太雜無從下手？</h2>
+              <img src="./assets/images/main/question_3.png" alt="動畫技能樹太雜無從下手？" class="hidden lg:block">
+              <img src="./assets/images/main/question_3_m.png" alt="動畫技能樹太雜無從下手？" class="lg:hidden">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="hidden fixed lg:flex justify-around -bottom-56 w-full littleTree transition-all">
+      <img src="./assets/images/bg/bg_decorate_09.png" alt="littleTree" class="w-[250px] -scale-x-100">
+      <img src="./assets/images/bg/bg_decorate_09.png" alt="littleTree" class="w-[250px]">
+    </div>
+  </section>
+
+  <section class="section section3 bg-secondary w-screen lg:h-screen z-[8]">
+    <div class="text-center py-8 lg:fixed w-full flex flex-col justify-center items-center section3Title lg:invisible">
+      <h2 class="title text-2xl lg:text-6xl text-primary w-full py-[75px]">本屆主題：互動式網頁設計</h2>
+      <p class="text-xl lg:text-2xl text-secondary-dark tracking-widest">以下兩個角色進行攜手合作</p>
+    </div>
+    <div class="container mx-auto">
+      <div class="lg:fixed top-[28%] lg:left-1/2 lg:-translate-x-1/2 container 2xl:px-20">
+        <ul class="grid lg:grid-cols-3 gap-4 relative w-full section3Group lg:invisible">
+          <li class="flex justify-center lg:justify-end lg:py-10 transition-all">
+            <div class="grid grid-cols-2 lg:grid-cols-1 items-center">
+              <img src="./assets/images/character/character_f2e.png" alt="前端工程師" class="lg:hidden">
+              <div class="flex flex-col items-center">
+                <img src="./assets/images/btn/btn_joinHand.png" alt="joinHand"
+                  class="joinHand w-[60px] animate-down lg:invisible">
+                <img src="./assets/images/btn/btn_join.png" alt="joinBtn" class="cursor-pointer joinBtn w-[100px]">
+                <h2 class="text-xl lg:text-3xl text-primary mt-2">前端工程師</h2>
+              </div>
+            </div>
+          </li>
+          <li class="flex justify-center lg:py-10 transition-all">
+            <div class="grid grid-cols-2 lg:grid-cols-1 items-center">
+              <div class="flex flex-col items-center">
+                <img src="./assets/images/btn/btn_joinHand.png" alt="joinHand"
+                  class="joinHand w-[60px] animate-down lg:invisible">
+                <img src="./assets/images/btn/btn_join.png" alt="joinBtn" class="cursor-pointer joinBtn w-[100px]">
+                <h2 class="text-xl lg:text-3xl text-primary mt-2">UI 設計師</h2>
+              </div>
+              <img src="./assets/images/character/character_ui.png" alt="前端工程師" class="lg:hidden">
+            </div>
+          </li>
+          <li class="flex justify-center lg:justify-start lg:py-10 transition-all">
+            <div class="grid grid-cols-2 lg:grid-cols-1 items-center">
+              <img src="./assets/images/character/character_team.png" alt="團體組(UI + 前端)" class="lg:hidden">
+              <div class="flex flex-col items-center">
+                <img src="./assets/images/btn/btn_joinHand.png" alt="joinHand"
+                  class="joinHand w-[60px] animate-down lg:invisible">
+                <img src="./assets/images/btn/btn_join.png" alt="joinBtn" class="cursor-pointer joinBtn w-[100px]">
+                <h2 class="text-xl lg:text-3xl text-primary mt-2">團體組(UI + 前端)</h2>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section4 bg-secondary w-screen h-screen z-[7] overflow-auto">
+    <div
+      class="text-center py-8 lg:fixed w-full flex flex-col justify-center items-center section4Title lg:invisible z-[1]">
+      <h2 class="title text-2xl lg:text-6xl text-primary w-full py-[80px]">年度最強合作，三大主題來襲</h2>
+      <p class="text-xl lg:text-2xl text-secondary-dark tracking-widest">各路廠商強強聯手</p>
+      <p class="text-xl lg:text-2xl text-secondary-dark tracking-widest">共同設計出接地氣的網頁互動挑戰關卡</p>
+    </div>
+    <div class="container mx-auto">
+      <div class="lg:absolute top-[38%] lg:left-1/2 lg:-translate-x-1/2 lg:container 2xl:px-20">
+        <ul class="relative w-full">
+          <li
+            class="flex flex-col lg:flex-row justify-center lg:justify-start items-center lg:items-start lg:mb-20 section4List1 lg:py-10 transition-all duration-500">
+            <img src="./assets/images/main/week_1.png" alt="The F3E 活動網站設計" class="w-1/2 lg:max-w-[300px]">
+            <div class="text-center lg:text-start lg:ml-10">
+              <h2 class="text-3xl lg:text-6xl uppercase text-highlight tracking-widest mb-3 lg:mb-5">WEEK 1</h2>
+              <h3 class="text-2xl lg:text-5xl text-primary tracking-widest mb-3 lg:mb-5">The F3E 活動網站設計</h3>
+              <div
+                class="flex flex-col lg:flex-row justify-center lg:justify-start items-center lg:items-start gap-4 mb-3 lg:mb-5">
+                <p
+                  class="text-secondary-dark text-lg lg:text-2xl px-8 py-1 border border-secondary-dark rounded-full w-fit">
+                  Parallax Scrolling
+                </p>
+                <p
+                  class="text-secondary-dark text-lg lg:text-2xl px-8 py-1 border border-secondary-dark rounded-full w-fit">
+                  #版塊設計
+                </p>
+              </div>
+              <button type="button" class="btn bg-secondary-dark text-white">查看關卡細節</button>
+            </div>
+          </li>
+          <li
+            class="flex flex-col lg:flex-row-reverse justify-center lg:justify-start items-center lg:items-start lg:mb-20 section4List2 py-10 transition-all duration-500">
+            <img src="./assets/images/main/week_2.png" alt="今晚，我想來點點簽" class="w-1/2 lg:max-w-[300px]">
+            <div class="text-center lg:text-start lg:mr-10">
+              <h2 class="text-3xl lg:text-6xl uppercase text-highlight tracking-widest mb-3 lg:mb-5">WEEK 2</h2>
+              <h3 class="text-2xl lg:text-5xl text-primary tracking-widest mb-3 lg:mb-5">今晚，我想來點點簽</h3>
+              <div
+                class="flex flex-col lg:flex-row justify-center lg:justify-start items-center lg:items-start gap-4 mb-3 lg:mb-5">
+                <p class="text-secondary-dark text-lg lg:text-2xl px-8 py-1 border border-secondary-dark rounded-full">
+                  Canvas</p>
+                <p class="text-secondary-dark text-lg lg:text-2xl px-8 py-1 border border-secondary-dark rounded-full">
+                  #凱鈿行動科技
+                </p>
+              </div>
+              <button type="button" class="btn bg-secondary-dark text-white">查看關卡細節</button>
+            </div>
+          </li>
+          <li
+            class="flex flex-col lg:flex-row justify-center lg:justify-start items-center lg:items-start lg:mb-20 section4List3 py-10 transition-all duration-500">
+            <img src="./assets/images/main/week_3.png" alt="" class="w-1/2 lg:max-w-[300px]">
+            <div class="text-center lg:text-start lg:ml-10">
+              <h2 class="text-3xl lg:text-6xl uppercase text-highlight tracking-widest mb-3 lg:mb-5">WEEK 3</h2>
+              <h3 class="text-2xl lg:text-5xl text-primary tracking-widest mb-3 lg:mb-5">Scrum 新手村</h3>
+              <div
+                class="flex flex-col lg:flex-row justify-center lg:justify-start items-center lg:items-start gap-4 mb-3 lg:mb-5">
+                <p class="text-secondary-dark text-lg lg:text-2xl px-8 py-1 border border-secondary-dark rounded-full">
+                  JS Draggable
+                </p>
+                <p class="text-secondary-dark text-lg lg:text-2xl px-8 py-1 border border-secondary-dark rounded-full">
+                  #鈦坦科技
+                </p>
+              </div>
+              <button type="button" class="btn bg-secondary-dark text-white">查看關卡細節</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section5 bg-secondary w-screen lg:h-screen z-[6]">
+    <div class="py-8 lg:fixed w-full flex justify-center items-center text-center">
+      <h2 class="title section5Title text-2xl lg:text-6xl text-primary w-full py-[60px] lg:hidden">
+        重要時程
+      </h2>
+    </div>
+    <div class="lg:fixed lg:left-1/2 lg:-translate-x-1/2 lg:top-1/4 lg:-translate-y-1/4 lg:w-[80%]">
+      <ul class="grid lg:grid-cols-3 gap-4 lg:gap-20 relative w-full section5Group ">
+        <li
+          class="flex flex-col justify-center items-center lg:justify-end pb-16 section5List1 lg:invisible transition-all duration-500">
+          <div
+            class="section5ListBlock1 flex flex-col items-center text-center transition-all duration-500 relative z-[1]">
+            <div class="flex flex-col items-center">
+              <img src="./assets/images/btn/btn_joinHand.png" alt="joinHand" class="joinHand w-[60px] animate-down">
+              <img src="./assets/images/btn/btn_join.png" alt="sign up" class="w-[100px]">
+            </div>
+            <h2 class="text-3xl lg:text-6xl text-highlight uppercase py-4">sign up</h2>
+            <p class="bg-primary text-white text-xl lg:text-3xl rounded-full font-medium px-8 py-2 lg:py-4 mb-4 w-fit">
+              10/13 - 11/16
+            </p>
+            <div class="text-center bg-secondary lg:p-4 relative z-[1]">
+              <p class="text-secondary-dark text-xl lg:text-2xl tracking-wider">截止前可修改報名組別</p>
+            </div>
+          </div>
+          <div class="hidden lg:block absolute -bottom-16 z-0">
+            <img src="./assets/images/main/date_weekLine.png" alt="" class="w-[30px]">
+          </div>
+        </li>
+        <li
+          class="flex flex-col justify-center items-center lg:justify-end pb-9 section5List2 lg:invisible transition-all duration-500">
+          <div
+            class="section5ListBlock2 flex flex-col items-center text-center transition-all duration-500 relative z-[1]">
+            <div class="flex flex-col items-center">
+              <img src="./assets/images/main/date_start.png" alt="start" class="w-[130px]">
+            </div>
+            <h2 class="text-3xl lg:text-6xl text-highlight uppercase py-4">start</h2>
+            <p class="bg-primary text-white text-xl lg:text-3xl rounded-full font-medium px-8 py-2 lg:py-4 mb-4 w-fit">
+              10/31 - 11/28
+            </p>
+            <div class="text-center bg-secondary lg:p-4">
+              <p class="text-secondary-dark text-xl lg:text-2xl tracking-wider">10/31(一) UI、團體組開賽</p>
+              <p class="text-secondary-dark text-xl lg:text-2xl tracking-wider">11/7(一) 前端組開賽</p>
+            </div>
+          </div>
+          <div class="hidden lg:block absolute -bottom-5 z-0">
+            <img src="./assets/images/main/date_weekLine.png" alt="" class="w-[30px]">
+          </div>
+        </li>
+        <li
+          class="flex flex-col justify-center items-center lg:justify-end pb-10 section5List3 lg:invisible transition-all duration-500">
+          <div
+            class="section5ListBlock3 flex flex-col items-center text-center transition-all duration-500 relative z-[1]">
+            <div class="flex flex-col items-center">
+              <img src="./assets/images/main/date_upload.png" alt="upload" class="w-[130px]">
+            </div>
+            <h2 class="text-3xl lg:text-6xl text-highlight uppercase py-4">upload</h2>
+            <p class="bg-primary text-white text-xl lg:text-3xl rounded-full font-medium px-8 py-2 lg:py-4 mb-4 w-fit">
+              10/13 - 11/28
+            </p>
+            <div class="text-center bg-secondary lg:p-4">
+              <p class="text-secondary-dark text-xl lg:text-2xl tracking-wider">依賽程登錄作品</p>
+              <p class="text-highlight lg:text-lg font-normal tracking-widest">額外競賽：主題豐厚獎金等著你</p>
+            </div>
+          </div>
+          <div class="hidden lg:block absolute -bottom-16 z-0">
+            <img src="./assets/images/main/date_weekLine.png" alt="" class="w-[30px]">
+          </div>
+        </li>
+      </ul>
+      <div class="dateLine hidden lg:inline-block lg:relative overflow-hidden">
+        <span class="mask transition-all duration-300"></span>
+        <img src="./assets/images/main/date_line.png" alt="dateLine">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section6 bg-secondary h-screen w-screen z-[5]">
+    <div class="lg:fixed lg:left-1/2 lg:-translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2 w-full">
+      <div class="text-center relative section6Title active transition-all duration-500">
+        <h2 class="text-3xl lg:text-6xl text-highlight">區區修煉<br class="lg:hidden">已經無法滿足了嗎？</h2>
+      </div>
+      <div class="hidden lg:flex justify-between items-center relative h-screen">
+        <img src="./assets/images/bg/bg_decorate_03.png" alt=""
+          class="w-[20%] absolute  transition-all duration-500 bgMove1">
+        <img src="./assets/images/bg/bg_decorate_07.png" alt=""
+          class="w-[24%] absolute  transition-all duration-500 bgMove2">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section7 bg-secondary h-screen w-screen z-[4]">
+    <div class="py-8 lg:fixed w-full flex justify-center items-center text-center">
+      <h2 class="title section7Title text-2xl lg:text-6xl text-primary w-full py-[40px] lg:invisible">還有比賽等著你
+      </h2>
+    </div>
+    <div class="lg:fixed lg:left-1/2 lg:-translate-x-1/2 top-[26%] w-full">
+      <div class="container mx-auto">
+        <div class="flex flex-col lg:flex-row justify-center items-center awardBlock transition-all duration-500">
+          <div class="w-[90%] lg:w-[380px]">
+            <img src="./assets/images/main/award.png" alt="award" class="w-full">
+          </div>
+          <ul class="px-4 mt-10 lg:mt-0 lg:ml-10">
+            <li class="mb-10">
+              <h3 class="text-highlight text-3xl mb-5">評審機制</h3>
+              <ul>
+                <li class="text-primary text-lg font-medium mb-1">初選：將由六角學院前端、UI 評審進行第一波篩選。</li>
+                <li class="text-primary text-lg font-medium mb-1">決選：由六角學院與贊助廠商討論，進行最後篩選，並於 12/30(五) 由評審進行直播公布名單！</li>
+              </ul>
+            </li>
+            <li class="mb-10">
+              <h3 class="text-highlight text-3xl mb-5">獎項</h3>
+              <ol class="list-decimal ml-5">
+                <li class="text-primary text-lg font-medium mb-1">初選佳作 共六十位 數位獎狀</li>
+                <li class="text-primary text-lg font-medium mb-1">個人企業獎 共六位 NTD<span
+                    class="text-highlight px-1">3,000</span>/位</li>
+                <li class="text-primary text-lg font-medium mb-1">團體企業獎 共三組 NTD<span
+                    class="text-highlight px-1">10,000</span>/組</li>
+                <li class="text-primary text-lg font-medium mb-1">以上皆提供完賽數位獎狀</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section8 bg-secondary h-screen w-screen z-[3]">
+    <div class="py-8 lg:fixed w-full flex justify-center items-center text-center">
+      <h2 class="title section8Title text-2xl lg:text-6xl text-primary w-full py-[30px] lg:invisible">贊助單位</h2>
+    </div>
+    <div class="lg:fixed lg:left-1/2 lg:-translate-x-1/2 top-[26%] w-full z-[1]">
+      <div class="container mx-auto w-[70%]">
+        <ul class="grid lg:grid-cols-3 gap-10 lg:gap-4">
+          <li class="flex flex-col justify-center items-center section8List1 transition-all duration-500">
+            <div class="bgSponsor w-full lg:w-[70%] mb-2 lg:mb-5">
+              <img src="./assets/images/main/logo_blockstudio.png" alt="blockstudio" class="w-full cursor-pointer">
+            </div>
+            <p
+              class="text-secondary-dark text-lg lg:text-2xl px-5 py-1 border text-center tracking-widest font-medium border-secondary-dark rounded-full w-fit">
+              #版塊設計</p>
+          </li>
+          <li class="flex flex-col justify-center items-center section8List2 transition-all duration-500">
+            <div class="bgSponsor w-full lg:w-[70%] mb-2 lg:mb-5">
+              <img src="./assets/images/main/logo_titansoft.png" alt="titansoft" class="w-full cursor-pointer">
+            </div>
+            <p
+              class="text-secondary-dark text-lg lg:text-2xl px-5 py-1 border text-center tracking-widest font-medium border-secondary-dark rounded-full w-fit">
+              #鈦坦科技</p>
+          </li>
+          <li class="flex flex-col justify-center items-center section8List3 transition-all duration-500">
+            <div class="bgSponsor w-full lg:w-[70%] mb-2 lg:mb-5">
+              <img src="./assets/images/main/logo_kdanmobile.png" alt="kdanmobile" class="w-full cursor-pointer">
+            </div>
+            <p
+              class="text-secondary-dark text-lg lg:text-2xl px-5 py-1 border text-center tracking-widest font-medium border-secondary-dark rounded-full w-fit">
+              #凱鈿科技</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="hidden lg:flex justify-between lg:fixed -bottom-40 bgTree transition-all duration-500">
+      <img src="./assets/images/bg/bg_decorate_04.png" alt="" class="w-[30%]">
+      <img src="./assets/images/bg/bg_decorate_08.png" alt="" class="w-[30%]">
+    </div>
+  </section>
+
+  <section class="section section9 bg-secondary h-screen w-screen z-[2] hidden lg:block">
+    <div class="flex justify-between fixed top-1/3 w-full transform scale-75 transition-all duration-500 cloud2">
+      <img src="./assets/images/bg/bg_decorate_01.png" alt="leftCloud"
+        class="w-1/3 leftCloud transition-all duration-500">
+      <img src="./assets/images/bg/bg_decorate_05.png" alt="rightCloud"
+        class="w-1/3 rightCloud transition-all duration-500">
+    </div>
+  </section>
+
+  <section class="section section10 bg-secondary h-screen w-screen z-[1]">
+    <div class="lg:fixed lg:left-1/2 lg:-translate-x-1/2 w-full h-screen flex justify-center items-center">
+      <div class="container mx-auto">
+        <div class="flex flex-col justify-center items-center section10Block transition-all duration-500">
+          <img src="./assets/images/logo/logo.png" alt="logo" class="w-[60%] lg:w-[30%]">
+          <div class="flex flex-col items-center">
+            <img src="./assets/images/btn/btn_joinHand.png" alt="joinHand"
+              class="joinHand w-[40px] lg:w-[80px] mt-3 -mb-4 animate-down">
+            <img src="./assets/images/btn/btn_join.png" alt="join"
+              class="w-[80px] lg:w-[180px] m-5 cursor-pointer endJoinBtn">
+            <p class="text-2xl lg:text-6xl text-highlight tracking-widest">立即報名</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

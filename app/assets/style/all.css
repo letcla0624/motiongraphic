@@ -1,0 +1,426 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: GenJyuuGothic-Bold;
+  src: url("../../assets/font/GenJyuuGothic-Bold.ttf");
+}
+@font-face {
+  font-family: GenJyuuGothic-Medium;
+  src: url("../../assets/font/GenJyuuGothic-Medium.ttf");
+}
+@font-face {
+  font-family: GenJyuuGothic;
+  src: url("../../assets/font/GenJyuuGothic-Regular.ttf");
+}
+
+@layer base {
+  html {
+    font-family: "GenJyuuGothic-Bold", sans-serif;
+  }
+  .font-normal {
+    font-family: "GenJyuuGothic", sans-serif;
+  }
+  .font-medium {
+    font-family: "GenJyuuGothic-Medium", sans-serif;
+  }
+  img {
+    object-fit: contain;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply rounded-full tracking-wider text-lg lg:text-xl font-normal px-6 py-1 lg:py-2;
+  }
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+.title {
+  background: url("../images/bg/bg_talking.png") 50% 0 no-repeat;
+  background-size: contain;
+  position: relative;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+@media (max-width: 992px) {
+  .title {
+    background: url("../images/bg/bg_talking_c.png") 50% 0 no-repeat;
+    background-size: cover;
+    padding: 12% 0;
+  }
+}
+.animate-down {
+  animation: down 0.15s alternate infinite;
+}
+@keyframes down {
+  0% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(-25%);
+  }
+}
+.sideMenu::before {
+  content: "";
+  position: absolute;
+  background: url("../images/bg/bg_menuSide.png") 100% 100% no-repeat;
+  background-size: cover;
+  width: 12px;
+  height: 100%;
+  left: 98%;
+  top: 0;
+}
+.sideMenu::after {
+  content: "";
+  position: absolute;
+  background: url("../images/btn/btn_burger_open.png") 0 center no-repeat;
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+  left: 104%;
+  top: 45%;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .sideMenu::after {
+    width: 48px;
+    height: 53px;
+    top: 1.5%;
+  }
+}
+.sideMenu.hover::after {
+  background: url("../images/btn/btn_burger_open_h.png") 0 center no-repeat;
+  background-size: cover;
+}
+.sideMenu.down::after {
+  background: url("../images/btn/btn_burger_open_p.png") 0 center no-repeat;
+  background-size: cover;
+}
+.sideMenu.open::after {
+  background: url("../images/btn/btn_burger_close.png") 0 center no-repeat;
+  background-size: cover;
+}
+.sideMenu.open.hover::after {
+  background: url("../images/btn/btn_burger_close_h.png") 0 center no-repeat !important;
+  background-size: cover !important;
+}
+.sideMenu.open.down::after {
+  background: url("../images/btn/btn_burger_close_p.png") 0 center no-repeat !important;
+  background-size: cover !important;
+}
+.allSection {
+  position: relative;
+  overflow: hidden;
+  height: 9200px;
+}
+@media (max-width: 992px) {
+  .allSection {
+    height: 100%;
+  }
+}
+.section {
+  position: absolute;
+  height: 100%;
+}
+@media (max-width: 992px) {
+  .section {
+    position: relative;
+    min-height: 100vh;
+  }
+}
+.section4List1,
+.section4List2,
+.section4List3 {
+  opacity: 0;
+}
+.section4List1.fadeIn,
+.section4List2.fadeIn,
+.section4List3.fadeIn {
+  opacity: 1;
+}
+.section4List1.fadeInHalf,
+.section4List2.fadeInHalf,
+.section4List3.fadeInHalf {
+  opacity: 0.2;
+}
+@media (max-width: 992px) {
+  .section4List1,
+  .section4List2,
+  .section4List3,
+  .section4List1.fadeIn,
+  .section4List2.fadeIn,
+  .section4List3.fadeI,
+  .section4List1.fadeInHalf,
+  .section4List2.fadeInHalf,
+  .section4List3.fadeInHalf {
+    opacity: 1;
+  }
+}
+.dateLine .mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #ffc37d;
+}
+.dateLine.dateLineAnimate .mask {
+  left: 100%;
+}
+.section5ListBlock1,
+.section5ListBlock2,
+.section5ListBlock3 {
+  opacity: 0;
+  transform: translateY(100px);
+}
+.section5ListBlock1.active,
+.section5ListBlock2.active,
+.section5ListBlock3.active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.section5List1.activeLeave,
+.section5List2.activeLeave,
+.section5List3.activeLeave {
+  opacity: 0;
+  transform: translateY(-100px);
+}
+@media (max-width: 992px) {
+  .section5ListBlock1,
+  .section5ListBlock2,
+  .section5ListBlock3,
+  .section5List1.activeLeave,
+  .section5List2.activeLeave,
+  .section5List3.activeLeave {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.bgMove1 {
+  left: -200%;
+  opacity: 0;
+}
+.bgMove2 {
+  right: -200%;
+  opacity: 0;
+}
+.bgMove1.zoomIn {
+  left: -80px;
+  opacity: 1;
+}
+.bgMove2.zoomIn {
+  right: -80px;
+  opacity: 1;
+}
+.bgMove1.move {
+  transform: translate(90%, -90%);
+  opacity: 1;
+}
+.bgMove2.move {
+  transform: translate(-50%, -40%);
+  opacity: 1;
+}
+.section6Title {
+  top: 13.5rem;
+  opacity: 1;
+  transform: scale(1);
+}
+.section6Title.active {
+  top: 18rem;
+  transform: translateZ(300px);
+  opacity: 0;
+  transform: scale(3);
+}
+@media (max-width: 992px) {
+  .section6Title,
+  .section6Title.active {
+    top: 20rem;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.awardBlock {
+  transform: translateX(-200px);
+  opacity: 0;
+}
+.awardBlock.move {
+  transform: translateX(0);
+  opacity: 1;
+}
+.awardBlock.leave {
+  transform: translateX(300px);
+  opacity: 0;
+}
+@media (max-width: 992px) {
+  .awardBlock,
+  .awardBlock.move,
+  .awardBlock.leave {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.bgSponsor {
+  background: url("../images/btn/btn_sponsor.png") center center / contain
+    no-repeat;
+  padding: 40px;
+}
+.bgTree {
+  transform: scale(3);
+  opacity: 0;
+}
+.bgTree.move {
+  transform: scale(1);
+  opacity: 1;
+}
+.bgTree.move2 {
+  transform: scale(0.6);
+  opacity: 1;
+  bottom: -20%;
+}
+.bgTree.move3 {
+  transform: scale(0.4);
+  opacity: 0;
+  bottom: -20%;
+}
+.section8List1 {
+  transform: translateY(25%);
+  opacity: 0;
+}
+.section8List2 {
+  transform: translateY(50%);
+  opacity: 0;
+}
+.section8List3 {
+  transform: translateY(75%);
+  opacity: 0;
+}
+.section8List1.active,
+.section8List2.active,
+.section8List3.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+@media (max-width: 992px) {
+  .section8List1,
+  .section8List2,
+  .section8List3 {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.cloud2 .leftCloud {
+  transform: translateX(-800px);
+  opacity: 0;
+}
+.cloud2 .rightCloud {
+  transform: translateX(1000px);
+  opacity: 0;
+}
+.cloud2 .leftCloud.move {
+  transform: translateX(-400px);
+  opacity: 1;
+}
+.cloud2 .rightCloud.move {
+  transform: translateX(600px);
+  opacity: 1;
+}
+.cloud2 .leftCloud.move2,
+.cloud2 .rightCloud.move2 {
+  transform: translate(0px, -150px);
+  opacity: 1;
+}
+.cloud2 .leftCloud.move3,
+.cloud2 .rightCloud.move3 {
+  transform: scale(0.6);
+  opacity: 1;
+}
+.finishPole,
+.finishLine {
+  transform: scale(2);
+  opacity: 0;
+}
+.finishPole.zoomIn,
+.finishLine.zoomIn {
+  transform: scale(1);
+  opacity: 1;
+}
+.finishLine_l {
+  transform: rotate(0deg);
+  margin-right: -21px;
+}
+.finishLine_r {
+  transform: rotate(0deg);
+  margin-left: -21px;
+}
+.finishLine_l.broken {
+  transform: rotate(-6deg);
+  margin-right: 0;
+}
+.finishLine_r.broken {
+  transform: rotate(6deg);
+  margin-left: 0;
+}
+.finishLine_l.leave {
+  transform: rotate(-6deg) translateX(-200px);
+  opacity: 0;
+}
+.finishLine_r.leave {
+  transform: rotate(6deg) translateX(200px);
+  opacity: 0;
+}
+.pet1.zoomOut {
+  transform: scale(3) translateX(-200px) !important;
+  opacity: 0;
+}
+.pet2.zoomOut {
+  transform: scale(3) translate(0) !important;
+  opacity: 0;
+}
+.pet3.zoomOut {
+  transform: scale(3) translateX(200px) !important;
+  opacity: 0;
+}
+@media (max-width: 992px) {
+  .pet1,
+  .pet2,
+  .pet3,
+  .pet1.zoomOut,
+  .pet2.zoomOut,
+  .pet3.zoomOut {
+    transform: scale(1) translateX(0) !important;
+    opacity: 1;
+  }
+}
+@media (max-width: 992px) {
+  .pets {
+    width: 90%;
+    margin: auto;
+    left: 5%;
+    bottom: 0px !important;
+    transform: scale(1) translate(0) !important;
+  }
+  .pets.small {
+    transform: scale(0.5) translate(0) !important;
+    bottom: -10px !important;
+  }
+}
+
+.section10Block {
+  transform: translateY(300px);
+  opacity: 0;
+}
+.section10Block.zoomIn {
+  transform: translateY(0);
+  opacity: 1;
+}
+@media (max-width: 992px) {
+  .section10Block {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
