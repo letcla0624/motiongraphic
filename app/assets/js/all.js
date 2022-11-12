@@ -161,6 +161,8 @@ const section10 = document.querySelector(".section10");
 const section2Title = document.querySelector(".section2Title");
 const section3Title = document.querySelector(".section3Title");
 const section4Title = document.querySelector(".section4Title");
+const section6Title = document.querySelector(".section6Title");
+const section7Title = document.querySelector(".section7Title");
 const section8Title = document.querySelector(".section8Title");
 
 const section3Group = document.querySelector(".section3Group");
@@ -208,7 +210,6 @@ function mobilePetsMove() {
 }
 
 function animate() {
-  // console.log(this.scrollY);
   if (this.scrollY > 0 && this.scrollY < 900) {
     pets.style.transform = "scale(1) translate(-50%, 0)";
     pets.style.bottom = 0;
@@ -251,6 +252,7 @@ function animate() {
     h1Text.classList.remove("lg:invisible");
     logo.classList.add("lg:invisible");
     section1.classList.remove("lg:invisible");
+    section2Title.classList.add("lg:invisible");
   } else if (this.scrollY >= 800) {
     startPole.classList.add("lg:invisible");
     logoText.classList.add("lg:invisible");
@@ -333,6 +335,7 @@ function animate() {
   if (this.scrollY >= 1900 && this.scrollY < 2400) {
     section3Group.classList.remove("lg:invisible");
     section3Title.classList.remove("lg:invisible");
+    section4Title.classList.add("lg:invisible");
   } else if (this.scrollY >= 2400) {
     section3Group.classList.add("lg:invisible");
     section3Title.classList.add("lg:invisible");
@@ -519,8 +522,6 @@ function animate() {
     bgMove2.classList.add("zoomIn");
   }
 
-  const section6Title = this.document.querySelector(".section6Title");
-
   if (this.scrollY >= 4300 && this.scrollY < 5600) {
     bgMove1.classList.remove("move");
     bgMove2.classList.remove("move");
@@ -546,12 +547,12 @@ function animate() {
 
   if (this.scrollY < 5850) {
     section6.classList.remove("lg:invisible");
+    section7Title.classList.add("lg:invisible");
   } else if (this.scrollY >= 5850) {
     section6.classList.add("lg:invisible");
   }
 
   const awardBlock = this.document.querySelector(".awardBlock");
-  const section7Title = this.document.querySelector(".section7Title");
 
   if (this.scrollY >= 5500 && this.scrollY < 5900) {
     section7Title.classList.add("lg:invisible");
@@ -597,6 +598,7 @@ function animate() {
     pet3.style.marginBottom = 0;
     nowPosition.style.left = "168px";
     nowPosition.style.top = "86px";
+    section8Title.classList.add("lg:invisible");
   } else if (this.scrollY >= 6500) {
     section7.classList.add("lg:invisible");
     bgTree.classList.add("move");
@@ -616,6 +618,7 @@ function animate() {
     section8List1.classList.remove("active");
     section8List2.classList.remove("active");
     section8List3.classList.remove("active");
+    section8Title.classList.add("lg:invisible");
   } else if (this.scrollY >= 6600) {
     bgTree.classList.remove("move");
     bgTree.classList.add("move2");

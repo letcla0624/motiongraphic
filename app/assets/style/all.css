@@ -280,12 +280,12 @@
 .bgTree.move2 {
   transform: scale(0.6);
   opacity: 1;
-  bottom: -20%;
+  bottom: -20rem;
 }
 .bgTree.move3 {
   transform: scale(0.4);
   opacity: 0;
-  bottom: -20%;
+  bottom: -20rem;
 }
 .section8List1 {
   transform: translateY(25%);
