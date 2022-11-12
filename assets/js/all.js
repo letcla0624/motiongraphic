@@ -1,8 +1,9 @@
-const sideMenu = document.querySelector(".sideMenu");
-const sideMenuBtn = document.querySelector(".sideMenu", ":after");
-const overlay = document.querySelector(".overlay");
+"use strict";
 
-sideMenuBtn.addEventListener("click", (e) => {
+var sideMenu = document.querySelector(".sideMenu");
+var sideMenuBtn = document.querySelector(".sideMenu", ":after");
+var overlay = document.querySelector(".overlay");
+sideMenuBtn.addEventListener("click", function (e) {
   sideMenu.classList.toggle("lg:-translate-x-36");
   sideMenu.classList.toggle("-translate-x-40");
   sideMenu.classList.toggle("open");
@@ -12,7 +13,6 @@ sideMenuBtn.addEventListener("click", (e) => {
     overlay.classList.add("hidden");
   }
 });
-
 function disableScroll() {
   document.body.classList.add("stop-scrolling");
   overlay.classList.remove("hidden");
@@ -21,164 +21,142 @@ function enableScroll() {
   document.body.classList.remove("stop-scrolling");
   overlay.classList.add("hidden");
 }
-
-sideMenuBtn.addEventListener("mouseenter", (e) => {
+sideMenuBtn.addEventListener("mouseenter", function (e) {
   e.target.classList.add("hover");
 });
-sideMenuBtn.addEventListener("mouseout", (e) => {
+sideMenuBtn.addEventListener("mouseout", function (e) {
   e.target.classList.remove("hover");
 });
-sideMenuBtn.addEventListener("mousedown", (e) => {
+sideMenuBtn.addEventListener("mousedown", function (e) {
   e.target.classList.add("down");
 });
-sideMenuBtn.addEventListener("mouseup", (e) => {
+sideMenuBtn.addEventListener("mouseup", function (e) {
   e.target.classList.remove("down");
 });
-
-const sideMenuList1 = document.querySelector(".sideMenuList1");
-const sideMenuList2 = document.querySelector(".sideMenuList2");
-const sideMenuList3 = document.querySelector(".sideMenuList3");
-const sideMenuList4 = document.querySelector(".sideMenuList4");
-
-sideMenuList1.addEventListener("mouseenter", (e) => {
+var sideMenuList1 = document.querySelector(".sideMenuList1");
+var sideMenuList2 = document.querySelector(".sideMenuList2");
+var sideMenuList3 = document.querySelector(".sideMenuList3");
+var sideMenuList4 = document.querySelector(".sideMenuList4");
+sideMenuList1.addEventListener("mouseenter", function (e) {
   e.preventDefault();
   e.target.setAttribute("src", "./assets/images/ic/ic_menu_info_h.png");
 });
-sideMenuList1.addEventListener("mouseout", (e) => {
+sideMenuList1.addEventListener("mouseout", function (e) {
   e.target.setAttribute("src", "./assets/images/ic/ic_menu_info.png");
 });
-sideMenuList2.addEventListener("mouseenter", (e) => {
+sideMenuList2.addEventListener("mouseenter", function (e) {
   e.preventDefault();
   e.target.setAttribute("src", "./assets/images/ic/ic_menu_list_h.png");
 });
-sideMenuList2.addEventListener("mouseout", (e) => {
+sideMenuList2.addEventListener("mouseout", function (e) {
   e.target.setAttribute("src", "./assets/images/ic/ic_menu_list.png");
 });
-sideMenuList3.addEventListener("mouseenter", (e) => {
+sideMenuList3.addEventListener("mouseenter", function (e) {
   e.preventDefault();
   e.target.setAttribute("src", "./assets/images/ic/ic_menu_strategy_h.png");
 });
-sideMenuList3.addEventListener("mouseout", (e) => {
+sideMenuList3.addEventListener("mouseout", function (e) {
   e.target.setAttribute("src", "./assets/images/ic/ic_menu_strategy.png");
 });
-sideMenuList4.addEventListener("mouseenter", (e) => {
+sideMenuList4.addEventListener("mouseenter", function (e) {
   e.preventDefault();
   e.target.setAttribute("src", "./assets/images/ic/ic_menu_job_h.png");
 });
-sideMenuList4.addEventListener("mouseout", (e) => {
+sideMenuList4.addEventListener("mouseout", function (e) {
   e.target.setAttribute("src", "./assets/images/ic/ic_menu_job.png");
 });
-
-const user = document.querySelector(".user");
-user.addEventListener("mouseenter", (e) => {
+var user = document.querySelector(".user");
+user.addEventListener("mouseenter", function (e) {
   e.target.setAttribute("src", "./assets/images/btn/btn_user_h.png");
 });
-user.addEventListener("mouseout", (e) => {
+user.addEventListener("mouseout", function (e) {
   e.target.setAttribute("src", "./assets/images/btn/btn_user.png");
 });
-
 function onJoinBtn(e) {
   e.target.setAttribute("src", "./assets/images/btn/btn_join_h.png");
 }
 function outJoinBtn(e) {
   e.target.setAttribute("src", "./assets/images/btn/btn_join.png");
 }
-const footerJoinBtn = document.querySelector(".footerJoinBtn");
-const endJoinBtn = document.querySelector(".endJoinBtn");
-
-footerJoinBtn.addEventListener("mouseenter", (e) => {
+var footerJoinBtn = document.querySelector(".footerJoinBtn");
+var endJoinBtn = document.querySelector(".endJoinBtn");
+footerJoinBtn.addEventListener("mouseenter", function (e) {
   onJoinBtn(e);
 });
-footerJoinBtn.addEventListener("mouseout", (e) => {
+footerJoinBtn.addEventListener("mouseout", function (e) {
   outJoinBtn(e);
 });
-
-endJoinBtn.addEventListener("mouseenter", (e) => {
+endJoinBtn.addEventListener("mouseenter", function (e) {
   onJoinBtn(e);
 });
-endJoinBtn.addEventListener("mouseout", (e) => {
+endJoinBtn.addEventListener("mouseout", function (e) {
   outJoinBtn(e);
 });
-
-const joinBtn = document.querySelectorAll(".joinBtn");
-const joinHand = document.querySelectorAll(".joinHand");
-
-joinBtn.forEach((item) => {
-  item.addEventListener("mouseenter", (e) => {
+var joinBtn = document.querySelectorAll(".joinBtn");
+var joinHand = document.querySelectorAll(".joinHand");
+joinBtn.forEach(function (item) {
+  item.addEventListener("mouseenter", function (e) {
     onJoinBtn(e);
     e.target.previousElementSibling.classList.remove("lg:invisible");
   });
-  item.addEventListener("mouseout", (e) => {
+  item.addEventListener("mouseout", function (e) {
     outJoinBtn(e);
     e.target.previousElementSibling.classList.add("lg:invisible");
   });
 });
-
-const bgSponsor = document.querySelectorAll(".bgSponsor img");
-
-bgSponsor.forEach((item) => {
-  item.addEventListener("mouseenter", (e) => {
-    let url = "./assets/images/btn/btn_sponsor_h.png";
-    e.target.parentElement.style.background = `url("${url}") center center / contain no-repeat`;
+var bgSponsor = document.querySelectorAll(".bgSponsor img");
+bgSponsor.forEach(function (item) {
+  item.addEventListener("mouseenter", function (e) {
+    var url = "./assets/images/btn/btn_sponsor_h.png";
+    e.target.parentElement.style.background = "url(\"".concat(url, "\") center center / contain no-repeat");
   });
-  item.addEventListener("mouseout", (e) => {
-    let url = "./assets/images/btn/btn_sponsor.png";
-    e.target.parentElement.style.background = `url("${url}") center center / contain no-repeat`;
+  item.addEventListener("mouseout", function (e) {
+    var url = "./assets/images/btn/btn_sponsor.png";
+    e.target.parentElement.style.background = "url(\"".concat(url, "\") center center / contain no-repeat");
   });
 });
-
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".cloud",
-      start: "center 50%",
-      end: "center 0%",
-      scrub: true,
-      pin: true,
-    },
-  })
-  .to(
-    ".cloud",
-    {
-      scale: 0.5,
-      opacity: 0,
-      duration: 10,
-    },
-    0
-  );
-
-const section1 = document.querySelector(".section1");
-const section2 = document.querySelector(".section2");
-const section3 = document.querySelector(".section3");
-const section4 = document.querySelector(".section4");
-const section5 = document.querySelector(".section5");
-const section6 = document.querySelector(".section6");
-const section7 = document.querySelector(".section7");
-const section8 = document.querySelector(".section8");
-const section9 = document.querySelector(".section9");
-const section10 = document.querySelector(".section10");
-
-const section2Title = document.querySelector(".section2Title");
-const section3Title = document.querySelector(".section3Title");
-const section4Title = document.querySelector(".section4Title");
-const section8Title = document.querySelector(".section8Title");
-
-const section3Group = document.querySelector(".section3Group");
-const trafficText = document.querySelector(".trafficText");
-const trafficAll = document.querySelector(".trafficAll");
-const redLight = document.querySelector(".redLight");
-const yellowLight = document.querySelector(".yellowLight");
-const greenLight = document.querySelector(".greenLight");
-const groupAll = document.querySelector(".groupAll");
-const startPole = document.querySelector(".startPole");
-const logo = document.querySelector(".logo");
-const logoText = document.querySelector(".logoText");
-const h1Text = document.querySelector(".h1Text");
-const pets = document.querySelector(".pets");
-const littleTree = document.querySelector(".littleTree");
-const nowPosition = document.querySelector(".nowPosition");
-const joinBlock = document.querySelector(".joinBlock");
-
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".cloud",
+    start: "center 50%",
+    end: "center 0%",
+    scrub: true,
+    pin: true
+  }
+}).to(".cloud", {
+  scale: 0.5,
+  opacity: 0,
+  duration: 10
+}, 0);
+var section1 = document.querySelector(".section1");
+var section2 = document.querySelector(".section2");
+var section3 = document.querySelector(".section3");
+var section4 = document.querySelector(".section4");
+var section5 = document.querySelector(".section5");
+var section6 = document.querySelector(".section6");
+var section7 = document.querySelector(".section7");
+var section8 = document.querySelector(".section8");
+var section9 = document.querySelector(".section9");
+var section10 = document.querySelector(".section10");
+var section2Title = document.querySelector(".section2Title");
+var section3Title = document.querySelector(".section3Title");
+var section4Title = document.querySelector(".section4Title");
+var section8Title = document.querySelector(".section8Title");
+var section3Group = document.querySelector(".section3Group");
+var trafficText = document.querySelector(".trafficText");
+var trafficAll = document.querySelector(".trafficAll");
+var redLight = document.querySelector(".redLight");
+var yellowLight = document.querySelector(".yellowLight");
+var greenLight = document.querySelector(".greenLight");
+var groupAll = document.querySelector(".groupAll");
+var startPole = document.querySelector(".startPole");
+var logo = document.querySelector(".logo");
+var logoText = document.querySelector(".logoText");
+var h1Text = document.querySelector(".h1Text");
+var pets = document.querySelector(".pets");
+var littleTree = document.querySelector(".littleTree");
+var nowPosition = document.querySelector(".nowPosition");
+var joinBlock = document.querySelector(".joinBlock");
 if (window.innerWidth >= 992) {
   window.addEventListener("scroll", animate);
   overlay.classList.add("hidden");
@@ -186,7 +164,6 @@ if (window.innerWidth >= 992) {
   window.addEventListener("scroll", mobilePetsMove);
   sideMenu.className.indexOf("open") > -1 ? disableScroll() : enableScroll();
 }
-
 window.addEventListener("resize", function () {
   if (this.innerWidth >= 992) {
     window.addEventListener("scroll", animate);
@@ -196,7 +173,6 @@ window.addEventListener("resize", function () {
     sideMenu.className.indexOf("open") > -1 ? disableScroll() : enableScroll();
   }
 });
-
 function mobilePetsMove() {
   if (this.scrollY > 0 && this.scrollY <= 8600) {
     pets.classList.add("small");
@@ -206,7 +182,6 @@ function mobilePetsMove() {
     joinBlock.classList.add("opacity-0");
   }
 }
-
 function animate() {
   // console.log(this.scrollY);
   if (this.scrollY > 0 && this.scrollY < 900) {
@@ -224,7 +199,6 @@ function animate() {
     trafficText.classList.remove("lg:invisible");
     trafficText.textContent = "ready?";
   }
-
   if (this.scrollY >= 150 && this.scrollY < 300) {
     redLight.style.opacity = 0;
     yellowLight.style.opacity = 1;
@@ -236,7 +210,6 @@ function animate() {
     yellowLight.style.opacity = 0;
     greenLight.style.opacity = 1;
   }
-
   if (this.scrollY < 600) {
     trafficAll.classList.remove("lg:invisible");
     groupAll.classList.remove("lg:invisible");
@@ -244,7 +217,6 @@ function animate() {
     trafficAll.classList.add("lg:invisible");
     groupAll.classList.add("lg:invisible");
   }
-
   if (this.scrollY < 800) {
     startPole.classList.remove("lg:invisible");
     logoText.classList.remove("lg:invisible");
@@ -258,7 +230,6 @@ function animate() {
     logo.classList.remove("lg:invisible");
     section1.classList.add("lg:invisible");
   }
-
   if (this.scrollY >= 800 && this.scrollY < 900) {
     pets.style.transform = "scale(1) translate(-50%, 0)";
     pets.style.bottom = 0;
@@ -275,11 +246,9 @@ function animate() {
     nowPosition.style.top = "2px";
     section2Title.classList.remove("lg:invisible");
   }
-
-  const section2Block1 = document.querySelector(".section2Block1");
-  const section2Block2 = document.querySelector(".section2Block2");
-  const section2Block3 = document.querySelector(".section2Block3");
-
+  var section2Block1 = document.querySelector(".section2Block1");
+  var section2Block2 = document.querySelector(".section2Block2");
+  var section2Block3 = document.querySelector(".section2Block3");
   if (this.scrollY < 1100) {
     littleTree.style.transform = "scale(1)";
     section2Block1.classList.add("lg:opacity-0");
@@ -287,14 +256,12 @@ function animate() {
     littleTree.style.transform = "scale(0.8)";
     section2Block1.classList.remove("lg:opacity-0");
   }
-
   if (this.scrollY < 1300) {
     section2Block2.classList.add("lg:opacity-0");
   } else if (this.scrollY >= 1300) {
     littleTree.style.transform = "scale(0.65)";
     section2Block2.classList.remove("lg:opacity-0");
   }
-
   if (this.scrollY < 1500) {
     section2Block3.classList.add("lg:opacity-0");
     littleTree.classList.remove("lg:invisible");
@@ -303,7 +270,6 @@ function animate() {
     littleTree.classList.add("lg:invisible");
     section2Block3.classList.remove("lg:opacity-0");
   }
-
   if (this.scrollY >= 1500 && this.scrollY < 1700) {
     section2.classList.remove("lg:invisible");
     pets.style.transform = "scale(0.7) translate(-71%, 0)";
@@ -317,19 +283,16 @@ function animate() {
     nowPosition.style.left = "154px";
     nowPosition.style.top = "11px";
   }
-
   if (this.scrollY < 1800) {
     section3Title.classList.add("lg:invisible");
   } else if (this.scrollY >= 1800) {
     section3Title.classList.remove("lg:invisible");
   }
-
   if (this.scrollY < 1900) {
     section3Group.classList.add("lg:invisible");
   } else if (this.scrollY >= 1900) {
     section3Group.classList.remove("lg:invisible");
   }
-
   if (this.scrollY >= 1900 && this.scrollY < 2400) {
     section3Group.classList.remove("lg:invisible");
     section3Title.classList.remove("lg:invisible");
@@ -337,14 +300,12 @@ function animate() {
     section3Group.classList.add("lg:invisible");
     section3Title.classList.add("lg:invisible");
   }
-
-  const pet1 = document.querySelector(".pet1");
-  const pet2 = document.querySelector(".pet2");
-  const pet3 = document.querySelector(".pet3");
-  const section4List1 = this.document.querySelector(".section4List1");
-  const section4List2 = this.document.querySelector(".section4List2");
-  const section4List3 = this.document.querySelector(".section4List3");
-
+  var pet1 = document.querySelector(".pet1");
+  var pet2 = document.querySelector(".pet2");
+  var pet3 = document.querySelector(".pet3");
+  var section4List1 = this.document.querySelector(".section4List1");
+  var section4List2 = this.document.querySelector(".section4List2");
+  var section4List3 = this.document.querySelector(".section4List3");
   if (this.scrollY >= 2400 && this.scrollY < 2600) {
     section3.classList.remove("lg:invisible");
     pets.style.transform = "scale(1) translate(-50%, 0)";
@@ -372,19 +333,16 @@ function animate() {
     nowPosition.style.top = "12px";
     section4Title.classList.remove("lg:invisible");
   }
-
   if (this.scrollY > 2700 && this.scrollY <= 2800) {
     section4List1.classList.add("fadeInHalf");
   } else if (this.scrollY < 2700) {
     section4List1.classList.remove("fadeInHalf");
     section4List1.classList.remove("fadeIn");
   }
-
   if (this.scrollY > 2800) {
     section4List1.classList.remove("fadeInHalf");
     section4List1.classList.add("fadeIn");
   }
-
   if (this.scrollY > 3240) {
     section4List1.classList.remove("fadeIn");
     section4List1.classList.add("fadeInHalf");
@@ -396,7 +354,6 @@ function animate() {
     section4List2.classList.remove("fadeIn");
     section4List2.classList.add("fadeInHalf");
   }
-
   if (this.scrollY > 3400) {
     section4List1.classList.remove("fadeInHalf");
   } else if (this.scrollY > 3300 && this.scrollY <= 3400) {
@@ -404,7 +361,6 @@ function animate() {
     section4List2.classList.remove("fadeInHalf");
     section4List3.classList.add("fadeInHalf");
   }
-
   if (this.scrollY > 3600) {
     section4List2.classList.remove("fadeIn");
     section4List2.classList.add("fadeInHalf");
@@ -412,13 +368,11 @@ function animate() {
   } else if (this.scrollY > 3400 && this.scrollY <= 3600) {
     section4List3.classList.add("fadeInHalf");
   }
-
   if (this.scrollY > 4050) {
     section4List2.classList.remove("fadeInHalf");
     section4List3.classList.add("fadeInHalf");
     section4List3.classList.remove("fadeIn");
   }
-
   if (this.scrollY >= 4200) {
     section4.classList.add("lg:invisible");
     pets.style.transform = "scale(1) translate(-50%, 0)";
@@ -440,7 +394,6 @@ function animate() {
     pet2.style.marginBottom = "-10%";
     pet3.style.marginBottom = "-10%";
   }
-
   if (this.scrollY >= 2600 && this.scrollY < 4300) {
     nowPosition.style.left = "234px";
     nowPosition.style.top = "12px";
@@ -448,22 +401,18 @@ function animate() {
     nowPosition.style.left = "223px";
     nowPosition.style.top = "62px";
   }
-
-  const dateLine = this.document.querySelector(".dateLine");
-
+  var dateLine = this.document.querySelector(".dateLine");
   if (this.scrollY < 4400) {
     dateLine.classList.remove("dateLineAnimate");
   } else if (this.scrollY >= 4400) {
     dateLine.classList.add("dateLineAnimate");
   }
-
-  const section5List1 = this.document.querySelector(".section5List1");
-  const section5List2 = this.document.querySelector(".section5List2");
-  const section5List3 = this.document.querySelector(".section5List3");
-  const section5ListBlock1 = this.document.querySelector(".section5ListBlock1");
-  const section5ListBlock2 = this.document.querySelector(".section5ListBlock2");
-  const section5ListBlock3 = this.document.querySelector(".section5ListBlock3");
-
+  var section5List1 = this.document.querySelector(".section5List1");
+  var section5List2 = this.document.querySelector(".section5List2");
+  var section5List3 = this.document.querySelector(".section5List3");
+  var section5ListBlock1 = this.document.querySelector(".section5ListBlock1");
+  var section5ListBlock2 = this.document.querySelector(".section5ListBlock2");
+  var section5ListBlock3 = this.document.querySelector(".section5ListBlock3");
   if (this.scrollY < 4700) {
     section5List1.classList.add("lg:invisible");
     section5ListBlock1.classList.remove("active");
@@ -471,7 +420,6 @@ function animate() {
     section5List1.classList.remove("lg:invisible");
     section5ListBlock1.classList.add("active");
   }
-
   if (this.scrollY < 4900) {
     section5List2.classList.add("lg:invisible");
     section5ListBlock2.classList.remove("active");
@@ -479,7 +427,6 @@ function animate() {
     section5List2.classList.remove("lg:invisible");
     section5ListBlock2.classList.add("active");
   }
-
   if (this.scrollY < 5100) {
     section5List3.classList.add("lg:invisible");
     section5ListBlock3.classList.remove("active");
@@ -487,7 +434,6 @@ function animate() {
     section5List3.classList.remove("lg:invisible");
     section5ListBlock3.classList.add("active");
   }
-
   if (this.scrollY < 5400) {
     section5List1.classList.remove("activeLeave");
     section5List2.classList.remove("activeLeave");
@@ -499,10 +445,8 @@ function animate() {
     section5List3.classList.add("activeLeave");
     dateLine.classList.add("lg:opacity-0");
   }
-
-  const bgMove1 = this.document.querySelector(".bgMove1");
-  const bgMove2 = this.document.querySelector(".bgMove2");
-
+  var bgMove1 = this.document.querySelector(".bgMove1");
+  var bgMove2 = this.document.querySelector(".bgMove2");
   if (this.scrollY >= 5400 && this.scrollY < 5500) {
     section5.classList.remove("lg:invisible");
     bgMove1.classList.remove("zoomIn");
@@ -518,9 +462,7 @@ function animate() {
     bgMove1.classList.add("zoomIn");
     bgMove2.classList.add("zoomIn");
   }
-
-  const section6Title = this.document.querySelector(".section6Title");
-
+  var section6Title = this.document.querySelector(".section6Title");
   if (this.scrollY >= 4300 && this.scrollY < 5600) {
     bgMove1.classList.remove("move");
     bgMove2.classList.remove("move");
@@ -534,7 +476,6 @@ function animate() {
     nowPosition.style.left = "168px";
     nowPosition.style.top = "86px";
   }
-
   if (this.scrollY < 5800) {
     bgMove1.classList.remove("lg:opacity-0");
     bgMove2.classList.remove("lg:opacity-0");
@@ -543,16 +484,13 @@ function animate() {
     bgMove1.classList.add("lg:opacity-0");
     bgMove2.classList.add("lg:opacity-0");
   }
-
   if (this.scrollY < 5850) {
     section6.classList.remove("lg:invisible");
   } else if (this.scrollY >= 5850) {
     section6.classList.add("lg:invisible");
   }
-
-  const awardBlock = this.document.querySelector(".awardBlock");
-  const section7Title = this.document.querySelector(".section7Title");
-
+  var awardBlock = this.document.querySelector(".awardBlock");
+  var section7Title = this.document.querySelector(".section7Title");
   if (this.scrollY >= 5500 && this.scrollY < 5900) {
     section7Title.classList.add("lg:invisible");
     pets.style.transform = "scale(1) translate(-50%, 0)";
@@ -564,13 +502,11 @@ function animate() {
     pets.style.bottom = "-2%";
     pet2.style.transform = "scale(0.75)";
   }
-
   if (this.scrollY < 6000) {
     awardBlock.classList.remove("move");
   } else if (this.scrollY >= 6000) {
     awardBlock.classList.add("move");
   }
-
   if (this.scrollY >= 6000 && this.scrollY < 6400) {
     awardBlock.classList.add("move");
     awardBlock.classList.remove("leave");
@@ -580,12 +516,10 @@ function animate() {
     awardBlock.classList.add("leave");
     section7Title.classList.add("lg:invisible");
   }
-
-  const bgTree = this.document.querySelector(".bgTree");
-  const section8List1 = this.document.querySelector(".section8List1");
-  const section8List2 = this.document.querySelector(".section8List2");
-  const section8List3 = this.document.querySelector(".section8List3");
-
+  var bgTree = this.document.querySelector(".bgTree");
+  var section8List1 = this.document.querySelector(".section8List1");
+  var section8List2 = this.document.querySelector(".section8List2");
+  var section8List3 = this.document.querySelector(".section8List3");
   if (this.scrollY >= 5900 && this.scrollY < 6500) {
     section7.classList.remove("lg:invisible");
     bgTree.classList.remove("move");
@@ -609,7 +543,6 @@ function animate() {
     nowPosition.style.left = "123px";
     nowPosition.style.top = "122px";
   }
-
   if (this.scrollY >= 6500 && this.scrollY < 6600) {
     bgTree.classList.add("move");
     bgTree.classList.remove("move2");
@@ -623,7 +556,6 @@ function animate() {
     section8List2.classList.add("active");
     section8List3.classList.add("active");
   }
-
   if (this.scrollY >= 6600 && this.scrollY < 6800) {
     bgTree.classList.add("move2");
     bgTree.classList.remove("move3");
@@ -641,15 +573,13 @@ function animate() {
     section8Title.classList.add("lg:invisible");
     section8.classList.add("lg:invisible");
   }
-
-  const cloud2LeftCloud = document.querySelector(".cloud2 .leftCloud");
-  const cloud2RightCloud = document.querySelector(".cloud2 .rightCloud");
-  const finishPole = document.querySelector(".finishPole");
-  const finishLine = document.querySelector(".finishLine");
-  const finishLine_l = document.querySelector(".finishLine_l");
-  const finishLine_r = document.querySelector(".finishLine_r");
-  const petsUL = this.document.querySelector(".petsUL");
-
+  var cloud2LeftCloud = document.querySelector(".cloud2 .leftCloud");
+  var cloud2RightCloud = document.querySelector(".cloud2 .rightCloud");
+  var finishPole = document.querySelector(".finishPole");
+  var finishLine = document.querySelector(".finishLine");
+  var finishLine_l = document.querySelector(".finishLine_l");
+  var finishLine_r = document.querySelector(".finishLine_r");
+  var petsUL = this.document.querySelector(".petsUL");
   if (this.scrollY < 6900) {
     cloud2LeftCloud.classList.remove("move");
     cloud2RightCloud.classList.remove("move");
@@ -657,7 +587,6 @@ function animate() {
     cloud2LeftCloud.classList.add("move");
     cloud2RightCloud.classList.add("move");
   }
-
   if (this.scrollY >= 6900 && this.scrollY < 7100) {
     cloud2LeftCloud.classList.add("move");
     cloud2RightCloud.classList.add("move");
@@ -693,7 +622,6 @@ function animate() {
     nowPosition.style.left = "69px";
     nowPosition.style.top = "107px";
   }
-
   if (this.scrollY >= 7100 && this.scrollY < 7200) {
     cloud2LeftCloud.classList.remove("move3");
     cloud2RightCloud.classList.remove("move3");
@@ -721,7 +649,6 @@ function animate() {
     pet2.style.marginBottom = "10%";
     pet3.style.marginBottom = "10%";
   }
-
   if (this.scrollY >= 7200 && this.scrollY < 7400) {
     pet1.style.transform = "scale(1.2)";
     pet2.style.transform = "scale(1.2)";
@@ -743,7 +670,6 @@ function animate() {
     finishLine_l.classList.add("leave");
     finishLine_r.classList.add("leave");
   }
-
   if (this.scrollY < 7600) {
     pet1.classList.remove("zoomOut");
     pet2.classList.remove("zoomOut");
@@ -755,10 +681,8 @@ function animate() {
     pet3.classList.add("zoomOut");
     petsUL.classList.add("lg:invisible");
   }
-
-  const footer = this.document.querySelector("footer");
-  const section10Block = this.document.querySelector(".section10Block");
-
+  var footer = this.document.querySelector("footer");
+  var section10Block = this.document.querySelector(".section10Block");
   if (this.scrollY >= 7100 && this.scrollY < 7700) {
     finishPole.style.opacity = 1;
     finishPole.parentElement.classList.remove("lg:invisible");
@@ -767,7 +691,6 @@ function animate() {
     finishPole.style.opacity = 0;
     finishPole.parentElement.classList.add("lg:invisible");
   }
-
   if (this.scrollY < 7700) {
     section9.classList.remove("lg:invisible");
     footer.classList.remove("lg:invisible");
@@ -779,3 +702,4 @@ function animate() {
     section10Block.classList.add("zoomIn");
   }
 }
+//# sourceMappingURL=all.js.map

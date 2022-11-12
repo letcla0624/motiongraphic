@@ -1,10 +1,59 @@
----
-title: The F2E - 互動式網頁設計
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    The F2E - 互動式網頁設計
+  </title>
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <header class="sticky top-0 lg:fixed w-full bg-secondary lg:bg-transparent pr-3 py-2 lg:px-5 z-20">
+    <div class="flex justify-between items-center lg:items-start">
+      <div class="w-[48px] h-[48px] lg:hidden"></div>
+      <img src="./assets/images/logo/logo_text.png" alt="" class="max-w-[160px] lg:hidden">
+      <img src="./assets/images/logo/logo.png" alt="logo" class="w-[220px] m-5 mb-0 logo hidden lg:block invisible">
+      <img src="./assets/images/btn/btn_user.png" alt="user"
+        class="w-[50px] lg:w-[80px] lg:m-5 mb-0 cursor-pointer user">
+    </div>
+  </header>
+  <div class="overlay hidden bg-secondary/80 w-screen h-full overflow-hidden fixed top-0 left-0 z-30"></div>
+
+  <!-- side menu -->
+  <ul
+    class="sideMenu h-screen bg-primary p-10 top-0 pr-8 fixed z-30 -translate-x-40 lg:-translate-x-36 transition-all duration-300">
+    <li class="py-5">
+      <a href="#" class="flex flex-col justify-center items-center ">
+        <img src="./assets/images/ic/ic_menu_info.png" alt="" class="w-16 sideMenuList1">
+        <p class="text-lg tracking-widest font-normal text-secondary mt-2">關卡資訊</p>
+      </a>
+    </li>
+    <li class="py-5">
+      <a href="#" class="flex flex-col justify-center items-center">
+        <img src="./assets/images/ic/ic_menu_list.png" alt="" class="w-16 sideMenuList2">
+        <p class="text-lg tracking-widest font-normal text-secondary mt-2">作品列表</p>
+      </a>
+    </li>
+    <li class="py-5">
+      <a href="#" class="flex flex-col justify-center items-center">
+        <img src="./assets/images/ic/ic_menu_strategy.png" alt="" class="w-16 sideMenuList3">
+        <p class="text-lg tracking-widest font-normal text-secondary mt-2">資源攻略</p>
+      </a>
+    </li>
+    <li class="py-5">
+      <a href="#" class="flex flex-col justify-center items-center">
+        <img src="./assets/images/ic/ic_menu_job.png" alt="" class="w-16 sideMenuList4">
+        <p class="text-lg tracking-widest font-normal text-secondary mt-2">求職專區</p>
+      </a>
+    </li>
+  </ul>
+
+  
 <section class="bg-secondary h-screen relative" style="height: 33000px;">
 
   <header class="fixed w-full px-5 top-0 z-30">
@@ -128,3 +177,61 @@ current: index
     </div>
   </footer>
 </section>
+
+    <div
+      class="fixed bottom-0 lg:left-1/2 lg:-translate-x-1/2 w-full flex justify-center items-center pets transition-all duration-500 z-[11]">
+      <ul class="grid grid-cols-3 absolute bottom-0 z-[2] petsUL">
+        <li class="relative">
+          <img src="./assets/images/character/character_f2e.gif" alt="dog"
+            class="w-[90%] pet1 transition-all duration-300 z-1">
+        </li>
+        <li class="relative">
+          <img src="./assets/images/character/character_ui.gif" alt="cat"
+            class="lg:ml-4 3xl:ml-12 absolute bottom-0 w-[90%] pet2 transition-all duration-300 z-[3]">
+        </li>
+        <li class="relative">
+          <img src="./assets/images/character/character_team.gif" alt="pig"
+            class="lg:ml-4 absolute bottom-0 w-[90%] pet3 transition-all duration-300 z-0">
+        </li>
+      </ul>
+      <img src="./assets/images/main/road.png" alt="road"
+        class="w-full 3xl:w-auto max-w-[1175px] relative z-[1] transition-all duration-500">
+    </div>
+
+    <div class="fixed left-1/2 -translate-x-1/2 w-[75%] h-screen z-[10] bottom-0 invisible">
+      <img src="./assets/images/main/finish.png" alt="finish"
+        class="w-full h-screen object-fill finishPole transition-all duration-500">
+    </div>
+
+    <div class="hidden lg:block fixed w-full bottom-48 z-[12] finishLine transition-all duration-500">
+      <div class="flex justify-center items-center">
+        <img src="./assets/images/main/finishLine_l.png" alt="finishLine_l"
+          class="w-[60%] finishLine_l transition-all duration-1000">
+        <img src="./assets/images/main/finishLine_r.png" alt="finishLine_r"
+          class="w-[60%] finishLine_r transition-all duration-1000">
+      </div>
+    </div>
+
+    <footer class="fixed bottom-0 w-full z-20">
+      <div class="flex justify-end lg:justify-between px-5">
+        <div class="ml-5 hidden lg:block ">
+          <img src="./assets/images/main/map.svg" alt="map" class="relative">
+          <img src="./assets/images/main/map_now.gif" alt="position"
+            class="absolute top-[52px] left-[42px] nowPosition transition-all">
+        </div>
+        <div class="flex flex-col items-center w-[12%] joinBlock opacity-0 lg:opacity-100">
+          <p class="text-primary text-xs lg:text-2xl tracking-widest uppercase">join</p>
+          <img src="./assets/images/btn/btn_joinHand.png" alt="joinHand"
+            class="w-[20px] lg:w-[48px] mt-1 lg:mt-3 -mb-5 lg:-mb-4 animate-down">
+          <img src="./assets/images/btn/btn_join.png" alt="join" class="lg:w-[80px] m-5 cursor-pointer footerJoinBtn">
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js" type="module"></script>
+</body>
+
+</html>
