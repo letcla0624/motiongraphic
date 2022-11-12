@@ -493,6 +493,7 @@ function animate() {
     section6.classList.add("lg:invisible");
   }
   var awardBlock = this.document.querySelector(".awardBlock");
+  var award_light = this.document.querySelector(".award_light");
   if (this.scrollY >= 5500 && this.scrollY < 5900) {
     section7Title.classList.add("lg:invisible");
     pets.style.transform = "scale(1) translate(-50%, 0)";
@@ -506,16 +507,20 @@ function animate() {
   }
   if (this.scrollY < 6000) {
     awardBlock.classList.remove("move");
+    award_light.classList.remove("turn");
   } else if (this.scrollY >= 6000) {
     awardBlock.classList.add("move");
+    award_light.classList.add("turn");
   }
   if (this.scrollY >= 6000 && this.scrollY < 6400) {
     awardBlock.classList.add("move");
     awardBlock.classList.remove("leave");
+    award_light.classList.add("turn");
     section7Title.classList.remove("lg:invisible");
   } else if (this.scrollY >= 6400) {
     awardBlock.classList.remove("move");
     awardBlock.classList.add("leave");
+    award_light.classList.remove("turn");
     section7Title.classList.add("lg:invisible");
   }
   var bgTree = this.document.querySelector(".bgTree");

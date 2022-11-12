@@ -847,14 +847,14 @@ select {
 .top-\[26\%\] {
   top: 26%;
 }
+.top-0 {
+  top: 0px;
+}
 .-bottom-40 {
   bottom: -10rem;
 }
 .top-1\/3 {
   top: 33.333333%;
-}
-.top-0 {
-  top: 0px;
 }
 .bottom-0 {
   bottom: 0px;
@@ -1012,6 +1012,9 @@ select {
 .h-screen {
   height: 100vh;
 }
+.h-\[340px\] {
+  height: 340px;
+}
 .h-\[48px\] {
   height: 48px;
 }
@@ -1064,6 +1067,9 @@ select {
 }
 .w-\[90\%\] {
   width: 90%;
+}
+.w-\[340px\] {
+  width: 340px;
 }
 .w-\[70\%\] {
   width: 70%;
@@ -1688,6 +1694,32 @@ select {
             transform: scale(1);
   }
 }
+.award_light.turn {
+  -webkit-animation: turn 1s both;
+          animation: turn 1s both;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+@-webkit-keyframes turn {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+  }
+}
+@keyframes turn {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+  }
+}
 .awardBlock {
   -webkit-transform: translateX(-200px);
       -ms-transform: translateX(-200px);
@@ -1917,7 +1949,6 @@ select {
     bottom: -10px !important;
   }
 }
-
 .section10Block {
   -webkit-transform: translateY(300px);
       -ms-transform: translateY(300px);
@@ -2098,6 +2129,10 @@ select {
 
   .lg\:h-screen {
     height: 100vh;
+  }
+
+  .lg\:h-\[380px\] {
+    height: 380px;
   }
 
   .lg\:w-1\/5 {
