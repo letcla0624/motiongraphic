@@ -1,3 +1,31 @@
+let rateNum = 0;
+const process = document.querySelector(".process");
+const percentText = document.querySelector(".percentText");
+
+function onReady(callback) {
+  const intervalId = window.setInterval(function () {
+    if (document.querySelector("body") !== undefined) {
+      if (rateNum < 100) {
+        rateNum += 1;
+        process.style.width = `${rateNum + 10}%`;
+        percentText.textContent = `${rateNum}%`;
+      } else {
+        window.clearInterval(intervalId);
+        callback.call(this);
+      }
+    }
+  }, 50);
+}
+
+function setVisible(selector, visible) {
+  document.querySelector(selector).style.display = visible ? "block" : "none";
+}
+
+onReady(function () {
+  setVisible("#app", true);
+  setVisible("#loading", false);
+});
+
 const sideMenu = document.querySelector(".sideMenu");
 const sideMenuBtn = document.querySelector(".sideMenu", ":after");
 const overlay = document.querySelector(".overlay");
