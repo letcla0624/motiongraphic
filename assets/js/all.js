@@ -1,5 +1,29 @@
 "use strict";
 
+var rateNum = 0;
+var process = document.querySelector(".process");
+var percentText = document.querySelector(".percentText");
+function onReady(callback) {
+  var intervalId = window.setInterval(function () {
+    if (document.querySelector("body") !== undefined) {
+      if (rateNum < 100) {
+        rateNum += 1;
+        process.style.width = "".concat(rateNum + 10, "%");
+        percentText.textContent = "".concat(rateNum, "%");
+      } else {
+        window.clearInterval(intervalId);
+        callback.call(this);
+      }
+    }
+  }, 50);
+}
+function setVisible(selector, visible) {
+  document.querySelector(selector).style.display = visible ? "block" : "none";
+}
+onReady(function () {
+  setVisible("#app", true);
+  setVisible("#loading", false);
+});
 var sideMenu = document.querySelector(".sideMenu");
 var sideMenuBtn = document.querySelector(".sideMenu", ":after");
 var overlay = document.querySelector(".overlay");
