@@ -165,6 +165,10 @@ const section6Title = document.querySelector(".section6Title");
 const section7Title = document.querySelector(".section7Title");
 const section8Title = document.querySelector(".section8Title");
 
+const pet1 = document.querySelector(".pet1");
+const pet2 = document.querySelector(".pet2");
+const pet3 = document.querySelector(".pet3");
+
 const section3Group = document.querySelector(".section3Group");
 const trafficText = document.querySelector(".trafficText");
 const trafficAll = document.querySelector(".trafficAll");
@@ -341,9 +345,6 @@ function animate() {
     section3Title.classList.add("lg:invisible");
   }
 
-  const pet1 = document.querySelector(".pet1");
-  const pet2 = document.querySelector(".pet2");
-  const pet3 = document.querySelector(".pet3");
   const section4List1 = this.document.querySelector(".section4List1");
   const section4List2 = this.document.querySelector(".section4List2");
   const section4List3 = this.document.querySelector(".section4List3");
@@ -656,11 +657,13 @@ function animate() {
   const finishLine = document.querySelector(".finishLine");
   const finishLine_l = document.querySelector(".finishLine_l");
   const finishLine_r = document.querySelector(".finishLine_r");
-  const petsUL = this.document.querySelector(".petsUL");
+  const petsUL = document.querySelector(".petsUL");
+  const map = document.querySelector(".map");
 
   if (this.scrollY < 6900) {
     cloud2LeftCloud.classList.remove("move");
     cloud2RightCloud.classList.remove("move");
+    map.classList.remove("finish");
   } else if (this.scrollY >= 6900) {
     cloud2LeftCloud.classList.add("move");
     cloud2RightCloud.classList.add("move");
@@ -683,6 +686,7 @@ function animate() {
     pet3.style.marginBottom = "-10%";
     nowPosition.style.left = "123px";
     nowPosition.style.top = "122px";
+    map.classList.remove("finish");
   } else if (this.scrollY >= 7100) {
     cloud2LeftCloud.classList.remove("move");
     cloud2RightCloud.classList.remove("move");
@@ -700,6 +704,7 @@ function animate() {
     pet3.style.marginBottom = 0;
     nowPosition.style.left = "69px";
     nowPosition.style.top = "107px";
+    map.classList.add("finish");
   }
 
   if (this.scrollY >= 7100 && this.scrollY < 7200) {
@@ -787,3 +792,21 @@ function animate() {
     section10Block.classList.add("zoomIn");
   }
 }
+
+function mousemove(event) {
+  if (event.pageX > window.innerWidth / 2) {
+    pet1.style.transform = "translateX(10%)";
+    pet2.style.transform = "translateX(-10%)";
+    pet3.style.transform = "translateX(10%)";
+  } else if (event.pageX < window.innerWidth / 2) {
+    pet1.style.transform = "translateX(-10%)";
+    pet2.style.transform = "translateX(10%)";
+    pet3.style.transform = "translateX(-10%)";
+  } else {
+    pet1.style.transform = "translateX(0)";
+    pet2.style.transform = "translateX(0)";
+    pet3.style.transform = "translateX(0)";
+  }
+}
+
+window.addEventListener("mousemove", mousemove);

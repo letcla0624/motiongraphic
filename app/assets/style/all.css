@@ -28,6 +28,11 @@
   img {
     object-fit: contain;
   }
+  body,
+  a,
+  button {
+    cursor: url("../images/cursor/cursor.svg"), default;
+  }
 }
 
 @layer components {
@@ -84,7 +89,6 @@
   height: 80px;
   left: 104%;
   top: 45%;
-  cursor: pointer;
 }
 @media (max-width: 992px) {
   .sideMenu::after {
@@ -434,4 +438,7 @@
     transform: translateY(0);
     opacity: 1;
   }
+}
+.map.finish {
+  content: url("../images/main/map_finish.svg");
 }
