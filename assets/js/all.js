@@ -144,6 +144,9 @@ var section4Title = document.querySelector(".section4Title");
 var section6Title = document.querySelector(".section6Title");
 var section7Title = document.querySelector(".section7Title");
 var section8Title = document.querySelector(".section8Title");
+var pet1 = document.querySelector(".pet1");
+var pet2 = document.querySelector(".pet2");
+var pet3 = document.querySelector(".pet3");
 var section3Group = document.querySelector(".section3Group");
 var trafficText = document.querySelector(".trafficText");
 var trafficAll = document.querySelector(".trafficAll");
@@ -303,9 +306,6 @@ function animate() {
     section3Group.classList.add("lg:invisible");
     section3Title.classList.add("lg:invisible");
   }
-  var pet1 = document.querySelector(".pet1");
-  var pet2 = document.querySelector(".pet2");
-  var pet3 = document.querySelector(".pet3");
   var section4List1 = this.document.querySelector(".section4List1");
   var section4List2 = this.document.querySelector(".section4List2");
   var section4List3 = this.document.querySelector(".section4List3");
@@ -588,10 +588,12 @@ function animate() {
   var finishLine = document.querySelector(".finishLine");
   var finishLine_l = document.querySelector(".finishLine_l");
   var finishLine_r = document.querySelector(".finishLine_r");
-  var petsUL = this.document.querySelector(".petsUL");
+  var petsUL = document.querySelector(".petsUL");
+  var map = document.querySelector(".map");
   if (this.scrollY < 6900) {
     cloud2LeftCloud.classList.remove("move");
     cloud2RightCloud.classList.remove("move");
+    map.classList.remove("finish");
   } else if (this.scrollY >= 6900) {
     cloud2LeftCloud.classList.add("move");
     cloud2RightCloud.classList.add("move");
@@ -613,6 +615,7 @@ function animate() {
     pet3.style.marginBottom = "-10%";
     nowPosition.style.left = "123px";
     nowPosition.style.top = "122px";
+    map.classList.remove("finish");
   } else if (this.scrollY >= 7100) {
     cloud2LeftCloud.classList.remove("move");
     cloud2RightCloud.classList.remove("move");
@@ -630,6 +633,7 @@ function animate() {
     pet3.style.marginBottom = 0;
     nowPosition.style.left = "69px";
     nowPosition.style.top = "107px";
+    map.classList.add("finish");
   }
   if (this.scrollY >= 7100 && this.scrollY < 7200) {
     cloud2LeftCloud.classList.remove("move3");
@@ -711,4 +715,20 @@ function animate() {
     section10Block.classList.add("zoomIn");
   }
 }
+function mousemove(event) {
+  if (event.pageX > window.innerWidth / 2) {
+    pet1.style.transform = "translateX(10%)";
+    pet2.style.transform = "translateX(-10%)";
+    pet3.style.transform = "translateX(10%)";
+  } else if (event.pageX < window.innerWidth / 2) {
+    pet1.style.transform = "translateX(-10%)";
+    pet2.style.transform = "translateX(10%)";
+    pet3.style.transform = "translateX(-10%)";
+  } else {
+    pet1.style.transform = "translateX(0)";
+    pet2.style.transform = "translateX(0)";
+    pet3.style.transform = "translateX(0)";
+  }
+}
+window.addEventListener("mousemove", mousemove);
 //# sourceMappingURL=all.js.map

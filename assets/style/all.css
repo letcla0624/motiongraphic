@@ -586,6 +586,11 @@ select {
     -o-object-fit: contain;
        object-fit: contain;
   }
+  body,
+  a,
+  button {
+    cursor: url("../images/cursor/cursor.svg"), default;
+  }
 
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
@@ -1065,9 +1070,6 @@ select {
 .w-\[24\%\] {
   width: 24%;
 }
-.w-\[90\%\] {
-  width: 90%;
-}
 .w-\[340px\] {
   width: 340px;
 }
@@ -1106,6 +1108,9 @@ select {
 }
 .w-\[50px\] {
   width: 50px;
+}
+.w-\[90\%\] {
+  width: 90%;
 }
 .w-\[75\%\] {
   width: 75%;
@@ -1515,7 +1520,6 @@ select {
   height: 80px;
   left: 104%;
   top: 45%;
-  cursor: pointer;
 }
 @media (max-width: 992px) {
   .sideMenu::after {
@@ -1968,6 +1972,9 @@ select {
             transform: translateY(0);
     opacity: 1;
   }
+}
+.map.finish {
+  content: url("../images/main/map_finish.svg");
 }
 @media (min-width: 992px) {
 
